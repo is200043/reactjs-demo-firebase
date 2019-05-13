@@ -20,7 +20,7 @@ exports.moltinPayment = functions.https.onRequest((request, response) => {
     const mailOptions = {
         to: email,
         bcc: 'chonlakorn.pun@gmail.com',
-        form: '',
+        from: emailAccount.email,
         subject: `Recieve Order No. ${orderId}`,
         // html: ejs.render(orderCustomerConfirm, {value}),
         text: `Dekhippozaa store recieve your order ${orderId} now.\n Thank for shop`
